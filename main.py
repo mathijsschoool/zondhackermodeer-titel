@@ -3,7 +3,7 @@ def on_button_pressed_a():
 input.on_button_pressed(Button.A, on_button_pressed_a)
 
 def laat_motor_draaien(port: number, time_milliseconds: number, speed: number):
-    global portlist
+    
     portlist = [AnalogPin.P16, AnalogPin.P15, AnalogPin.P14, AnalogPin.P13]
     pins.analog_write_pin(portlist[port - 1], 0)
     pins.analog_write_pin(portlist[port - 1], speed)
